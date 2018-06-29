@@ -8,12 +8,8 @@ public class HashMapTest {
     public HashMapTest() {
         createMap();
         showMap(hashTest);
-        replacePlaceMinMax();
-        showMap(hashTest);
-        showAllKey();
-        showAllValue();
-        copyHashMapArr();
-        showMap(hashTestDoundle);
+        checkKeyHashMapArr(5);
+        checkValueHashMapArr(15);
     }
 
     Map<Integer,Integer> hashTest = new HashMap();
@@ -57,7 +53,28 @@ public class HashMapTest {
     public void copyHashMapArr(){
         hashTestDoundle.clear();
         hashTestDoundle.putAll(hashTest);
+
     }
+
+    public void checkKeyHashMapArr(int key){
+        if (hashTest.containsKey(key)){
+            System.out.println("Array have this key");
+        }else{
+            System.out.println("Array not have this key");
+        }
+
+    }
+
+    public void checkValueHashMapArr(int value){
+        if (hashTest.containsValue(value)){
+            System.out.println("Array have this value");
+        }else{
+            System.out.println("Array not have this value");
+        }
+
+    }
+
+
 
 
 
