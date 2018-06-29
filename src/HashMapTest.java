@@ -13,6 +13,8 @@ public class HashMapTest {
     }
 
     Map<Integer,Integer> hashTest = new HashMap();
+
+    //For
     Map<Integer,Integer> hashTestDoundle = new HashMap();
 
     public void createMap(){
@@ -26,6 +28,7 @@ public class HashMapTest {
         System.out.println(maparr);
     }
 
+    //Поменять местами наибольший и наименьший элементы массива
     public void replacePlaceMinMax(){
         int maxKey = Collections.max(hashTest.entrySet(), Map.Entry.comparingByValue()).getKey();
         int minKey = Collections.min(hashTest.entrySet(), Map.Entry.comparingByValue()).getKey();
@@ -37,12 +40,14 @@ public class HashMapTest {
         hashTest.put(maxKey, minValue);
     }
 
+    //Выведите список всех значений
     public void showAllValue(){
         for(Map.Entry<Integer,Integer> item: hashTest.entrySet()){
             System.out.println("Value = "+item.getValue());
         }
     }
 
+    //Выведите список всех ключей
     public void showAllKey(){
         for(Map.Entry<Integer,Integer> item: hashTest.entrySet()){
             System.out.println("Key = "+item.getKey());
@@ -50,12 +55,13 @@ public class HashMapTest {
 
     }
 
+    //Скопируйте массив хэшмэп в другой массив
     public void copyHashMapArr(){
         hashTestDoundle.clear();
         hashTestDoundle.putAll(hashTest);
 
     }
-
+    //Проверьте есть ли определенный ключ в хэшмэпе
     public void checkKeyHashMapArr(int key){
         if (hashTest.containsKey(key)){
             System.out.println("Array have this key");
@@ -65,6 +71,7 @@ public class HashMapTest {
 
     }
 
+    //Проверьте есть ли определенное значение в хэшмэпе
     public void checkValueHashMapArr(int value){
         if (hashTest.containsValue(value)){
             System.out.println("Array have this value");
